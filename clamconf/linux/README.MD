@@ -1,0 +1,1 @@
+At the moment this is a copy of my clamconf tool and is adjusted to work on linux.

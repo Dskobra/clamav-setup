@@ -12,9 +12,10 @@ menu(){
     
     if [ $input -eq 1 ]
     then
-        cd $USER/Downloads
+        cd /home/$USER/Downloads
         wget https://www.clamav.net/downloads/production/clamav-1.0.0.linux.x86_64.rpm
         sudo rpm -i clamav*.rpm
+        rm clamav*.rpm
     elif [ $input -eq 2 ]
     then
         # This script setups clamav "service user account" 

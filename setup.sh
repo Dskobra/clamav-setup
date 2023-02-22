@@ -12,7 +12,8 @@ menu(){
     
     if [ $input -eq 1 ]
     then
-        wget https://www.clamav.net/downloads/production/clamav-1.0.0.linux.x86_64.rpm
+        sudo dnf remove clamav*
+        wget https://www.clamav.net/downloads/production/clamav-1.0.1.linux.x86_64.rpm
         sudo rpm -i clamav*.rpm
         rm clamav*.rpm
     elif [ $input -eq 2 ]

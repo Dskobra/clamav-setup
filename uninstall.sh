@@ -11,7 +11,7 @@ menu(){
     printf "Option: "
     read input
     
-    if [ $input -eq "y" || "Y" ]
+    if [ $input == "y" ] || [ $input == "Y" ]
     then
         sudo killall -u clamav
         sudo dnf remove -y clamav*
@@ -23,18 +23,14 @@ menu(){
         sudo rm /usr/local/etc/clamd.conf.sample
         sudo rm /usr/local/etc/freshclam.conf.sample
         sudo userdel -r clamav
-    elif [ $input -eq 2 ]
-    then
-
-    elif [ $input -eq "n" || "N" ]
+    elif [ $input == "n" ] || [ $input == "N" ]
     then
         echo "Chose not to remove."
-    elif [ $input -eq "exit" ]
+    elif [ $input == "exit" ]
     then
 	    exit
     else
 	    menu
     fi
-    menu
 }
 menu
